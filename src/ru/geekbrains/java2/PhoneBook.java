@@ -7,15 +7,16 @@ public class PhoneBook {
     private List<String> phoneNumberList;
 
     public void add(String name, String phoneNumber) {
-        if (phoneBook.containsKey(name)){
-        phoneNumberList = phoneBook.get(name);
-        }else {
+        if (phoneBook.containsKey(name)) {
+            phoneNumberList = phoneBook.get(name);
+        } else {
             phoneNumberList = new ArrayList<>();
         }
         phoneNumberList.add(phoneNumber);
-        phoneBook.put(name,phoneNumberList);
+        phoneBook.put(name, phoneNumberList);
     }
-    public List<String> get(String name){
+
+    public List<String> get(String name) {
         return phoneBook.get(name);
     }
 }
